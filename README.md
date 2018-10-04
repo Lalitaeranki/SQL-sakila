@@ -3,10 +3,7 @@ USE sakila;
  -- 1a. Display the first and last names of all actors from the table actor
 SELECT first_name,last_name 
 FROM sakila.actor;
-
-
-
--- 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name.
+  -- 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column Actor Name.
 ALTER TABLE sakila.actor 
 ADD COLUMN `Actor Name` VARCHAR(100);
 UPDATE `actor` SET `Actor Name` = CONCAT_WS(" ", UPPER(`first_name`), UPPER(`last_name`));
